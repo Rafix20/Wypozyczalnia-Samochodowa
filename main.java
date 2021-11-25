@@ -1,3 +1,14 @@
+/**
+Funkcja psvm : Funkcja która wpisuje dane klienta.
+Funkcja glowna : Umożliwia wybranie kategorii w naszej wypożyczalni.
+Funkcja promocje : Informuje klienta na co i kiedy jest promocja.
+Funkcja marki_samochodow : Funkcja umożliwia zakup wyporzyczenia dla danej marki samochodu.
+Funkcja wypożyczenie : Informuje na ile i za ile są wypożyczenia oraz wyświetla jakie auto kto wyporzyczył oraz na ile.
+
+@autorzy
+Dawid Świderski, Rafał Skarżyński
+**/
+
 import java.util.Scanner;
 
 public class main extends klienci {
