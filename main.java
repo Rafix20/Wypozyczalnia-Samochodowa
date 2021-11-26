@@ -1,14 +1,3 @@
-/**
-Funkcja psvm : Funkcja która wpisuje dane klienta.
-Funkcja glowna : Umożliwia wybranie kategorii w naszej wypożyczalni.
-Funkcja promocje : Informuje klienta na co i kiedy jest promocja.
-Funkcja marki_samochodow : Funkcja umożliwia zakup wyporzyczenia dla danej marki samochodu.
-Funkcja wypożyczenie : Informuje na ile i za ile są wypożyczenia oraz wyświetla jakie auto kto wyporzyczył oraz na ile.
-
-@autorzy
-Dawid Świderski, Rafał Skarżyński
-**/
-
 import java.util.Scanner;
 
 public class main extends klienci {
@@ -19,20 +8,27 @@ public class main extends klienci {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Uzupełnij swoje dane");
-        klienci.imie = scanner.next();
-        klienci.nazwisko = scanner.next();
-        klienci.adres = scanner.next();
-        klienci.wiek = scanner.nextInt();
-        klienci.kod_pocztowy = scanner.nextInt();
+        klienci.imie_k = scanner.next();
+        klienci.nazwisko_k = scanner.next();
+        klienci.adres_k = scanner.next();
+        klienci.wiek_k = scanner.nextInt();
+        klienci.kod_pocztowy_k = scanner.nextInt();
 
-        klienci obiekt = new klienci(klienci.adres, klienci.kod_pocztowy, klienci.imie, klienci.nazwisko, klienci.wiek);
+        klienci obiekt = new klienci(klienci.adres_k, klienci.kod_pocztowy_k, klienci.imie_k, klienci.nazwisko_k, klienci.wiek_k);
 
 
         glowna();
 
 
-
     }
+
+    /**
+     * Umożliwia wybranie kategorii w naszej wypożyczalni.
+     *
+     * @autorzy
+     * Rafał Skarżyński, Dawid Świderski
+     */
+
     public static void glowna(){
         System.out.println("Witamy w wypożyczalni sportowych samochodów");
         System.out.println("1.Promocje");
@@ -58,12 +54,28 @@ public class main extends klienci {
         }
 
     }
+
+    /**
+     * Informuje klienta na co i kiedy jest promocja.
+     *
+     * @autorzy
+     * Dawid Świderski, Rafał Skarżyński
+     */
+
     public static void promocje(){
         System.out.println("wypożycz BMW M2 na dobe za jedyne 1000 zł");
         System.out.println("taniej dla firm o 10% na miesieczne wypożyczanie samochodów");
         System.out.println("każdego 7 dnia miesiaca rabat na każdy samochód o 3%");
         glowna();
     }
+
+    /**
+     * Funkcja umożliwia zakup wyporzyczenia dla danej marki samochodu.
+     *
+     * @autorzy
+     * Dawid Świderski, Rafał Skarżyński
+     */
+
     public static void marki_samochodow(){
         System.out.println("BMW");
         System.out.println("AUDI");
@@ -172,6 +184,13 @@ public class main extends klienci {
 
         glowna();
     }
+
+    /**
+     * Informuje na ile i za ile są wypożyczenia oraz wyświetla jakie auto kto wyporzyczył oraz na ile.
+     *
+     * @autorzy
+     * Rafał Skarżyński, Dawid Świderski
+     */
 
     public static void wypozyczenie(String input){
         System.out.println("wypożycz na dobę za 1150 zł");
