@@ -8,13 +8,13 @@ public class main extends klienci {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Uzupełnij swoje dane");
-        klienci.imie_k = scanner.next();
-        klienci.nazwisko_k = scanner.next();
-        klienci.adres_k = scanner.next();
-        klienci.wiek_k = scanner.nextInt();
-        klienci.kod_pocztowy_k = scanner.nextInt();
+        klienci.imie = scanner.next();
+        klienci.nazwisko = scanner.next();
+        klienci.adres = scanner.next();
+        klienci.wiek = scanner.nextInt();
+        klienci.kod_pocztowy = scanner.nextInt();
 
-        klienci obiekt = new klienci(klienci.adres_k, klienci.kod_pocztowy_k, klienci.imie_k, klienci.nazwisko_k, klienci.wiek_k);
+        klienci obiekt = new klienci(klienci.adres, klienci.kod_pocztowy, klienci.imie, klienci.nazwisko, klienci.wiek);
 
 
         glowna();
