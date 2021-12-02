@@ -1,20 +1,29 @@
-public class pracownicy {
+import java.util.Scanner;
 
-    private String adres;
-    private int kod_pocztowy;
-    private String imie;
-    private String nazwisko;
-    private int wiek;
-    private String stanowisko;
-    private int wyplata;
+public class  pracownicy extends klienci{
 
-    public pracownicy(String adres, int kod_pocztowy, String imie, String nazwisko, int wiek, String stanowisko, int wyplata) {
-        this.adres = adres;
-        this.kod_pocztowy = kod_pocztowy;
-        this.imie = imie;
-        this.nazwisko = nazwisko;
-        this.wiek = wiek;
-        this.stanowisko = stanowisko;
-        this.wyplata = wyplata;
+    private int nr_ID;
+
+
+    public void setNr_ID(int nr_ID) {
+        this.nr_ID = nr_ID;
     }
+
+    public static void Log_in(){
+        pracownicy object = new pracownicy();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj nr ID pracownika");
+        object.setNr_ID(scanner.nextInt());
+        System.out.println("Podaj email pracownika");
+        object.setEmail(scanner.next());
+        System.out.println("Haslo");
+        object.setHaslo(scanner.next());
+        System.out.println("zalogowano pomyślnie");
+    }
+
 }
+
+
+
+
+
