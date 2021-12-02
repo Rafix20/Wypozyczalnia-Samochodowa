@@ -1,20 +1,10 @@
 import java.util.Scanner;
 
-public class main extends klienci {
-    public main(String adres, int kod_pocztowy, String imie, String nazwisko, int wiek) {
-        super(adres, kod_pocztowy, imie, nazwisko, wiek);
-    }
+public class main {
+
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Uzupełnij swoje dane");
-        klienci.imie = scanner.next();
-        klienci.nazwisko = scanner.next();
-        klienci.adres = scanner.next();
-        klienci.wiek = scanner.nextInt();
-        klienci.kod_pocztowy = scanner.nextInt();
 
-        klienci obiekt = new klienci(klienci.adres, klienci.kod_pocztowy, klienci.imie, klienci.nazwisko, klienci.wiek);
 
 
         glowna();
@@ -33,8 +23,8 @@ public class main extends klienci {
         System.out.println("Witamy w wypożyczalni sportowych samochodów");
         System.out.println("1.Promocje");
         System.out.println("2.Marki samochodów");
-        System.out.println("3. Polecane produkty");
-        System.out.println("4. Wyjdź ze strony");
+        System.out.println("3. Logowanie");
+
         int opcje;
         Scanner scanner =  new Scanner(System.in);
         opcje = scanner.nextInt();
@@ -47,13 +37,32 @@ public class main extends klienci {
                 marki_samochodow();
             case 3:
 
-            case 4:
+                System.out.println("wybierz jedna z opcji");
 
-                break;
+                int logowanie;
+                Scanner log =  new Scanner(System.in);
+                logowanie = log.nextInt();
+                switch (logowanie) {
+                    case 1:
+                        System.out.println("1.Zaloguj jako pracownik");
+                        pracownicy.Log_in();
+                        glowna();
+                        break;
+                    case 2:
+                        System.out.println("2.Zaloguj jako klient");
+                        klienci.Log_in();
+                        glowna();
+                        break;
+                }
+            }
+
+
 
         }
 
-    }
+
+
+
 
     /**
      * Informuje klienta na co i kiedy jest promocja.
@@ -215,6 +224,26 @@ public class main extends klienci {
 
 
     }
+
+
+
+
+    private static void logowanie() {
+        int opcje;
+        Scanner scanner =  new Scanner(System.in);
+        opcje = scanner.nextInt();
+        switch (opcje) {
+            case 1:
+                System.out.println("1.Zaloguj jako pracownik");
+                pracownicy.Log_in();
+                glowna();
+            case 2:
+                System.out.println("2.Zaloguj jako klient");
+                klienci.Log_in();
+                glowna();
+        }
+        }
+
 
 
 }
